@@ -1,0 +1,27 @@
+ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;  
+    align-items: center;
+
+}
+
+.header{
+    border: 1px solid black;
+    padding: 10px;
+    background-color: black;
+  
+    
+}
+
+li{
+list-style-type: none;
+cursor: pointer;
+margin: 10px;
+font-weight: bold;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}

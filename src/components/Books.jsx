@@ -1,18 +1,19 @@
 import "./style.css";
-function Books({ booksDetails }) {
+
+function Books({ book }) {
   return (
     <div className="book-card">
       <img
-        src={booksDetails.coverImage}
-        alt={booksDetails.title}
+        src={book.coverImage}
+        alt={book.title}
         width="200"
         height="200"
         className="book-cover"
       />
       <div className="book-details">
-        <h2 className="book-title">Title: {booksDetails.title}</h2>
-        <p className="book-author">Author: {booksDetails.author}</p>
-        <p className="book-description">{booksDetails.description}</p>
+        <h2 className="book-title">Title: {book.title}</h2>
+        <p className="book-author">Author: {book.author}</p>
+        <p className="book-description">{book.description}</p>
       </div>
     </div>
   );

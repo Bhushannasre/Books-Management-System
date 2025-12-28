@@ -58,5 +58,47 @@ export const booksData = [
     coverImage: "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
     description:
       "Explains the importance of focused, distraction-free work in a world full of interruptions, especially valuable for developers and creators."
-  }
+  },
+{
+  id: 7,
+  title: "Design Patterns",
+  author: "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+  publishedDate: "1994-10-31",
+  pages: 395,
+  coverImage: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+  description:
+    "A foundational book that introduces reusable object-oriented design patterns to solve common software design problems."
+},
+{
+  id: 8,
+  title: "Refactoring",
+  author: "Martin Fowler",
+  publishedDate: "2018-11-20",
+  pages: 448,
+  coverImage: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=600&q=80",
+  description:
+    "A practical guide to improving existing code without changing its behavior, emphasizing clean structure and maintainability."
+},
+{
+  id: 9,
+  title: "Eloquent JavaScript",
+  author: "Marijn Haverbeke",
+  publishedDate: "2018-12-04",
+  pages: 472,
+  coverImage: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c",
+  description:
+    "A modern introduction to JavaScript that balances theory with practical examples, covering ES6+, functional programming, and the DOM."
+},
+
+{
+  id: 10,
+  title: "Thinking, Fast and Slow",
+  author: "Daniel Kahneman",
+  publishedDate: "2011-10-25",
+  pages: 499,
+  coverImage: "https://images.unsplash.com/photo-1491841550275-ad7854e35ca6",
+  description:
+    "Explores how humans think and make decisions, highlighting cognitive biases and mental models useful for problem-solving and design thinking."
+}
+
 ];

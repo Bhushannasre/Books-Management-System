@@ -7,7 +7,7 @@
 .book-card{
     width: 250px;
     height: 400px;
-    background-color: white;
+    background-color: rgb(250, 250, 250);
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -49,4 +49,53 @@
 .book-description{
    
     color: #333;
+}
+
+.error-content{
+    text-align: center;
+    margin-top: 50px;
+  
+}
+.error-content h1{
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: black
+}
+
+.error-content p{
+    font-size: 1.2em;
+    color: #555;
+}
+.btn{
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin: 3px;
+}
+.btn:hover{
+   
+    transform: scale(1.1);
+   
+}
+body{
+background: linear-gradient(
+  -45deg,
+  #140124,
+  #4c1d95,
+  #1e3a8a,
+  #0284c7
+);
+background-size: 300% 300%;
+animation: gradientFlow 8s ease infinite;
+
+@keyframes gradientFlow {
+  0% { background-position: 10% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 }
