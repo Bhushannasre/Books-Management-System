@@ -1,0 +1,20 @@
+.main-footer {
+  background: black;
+  color: white;
+  padding: 30px;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.heading {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

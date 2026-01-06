@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./header.css";
+
 function Header() {
   return (
     <header className="header">
@@ -11,4 +12,5 @@ function Header() {
     </header>
   );
 }
+
 export default Header;

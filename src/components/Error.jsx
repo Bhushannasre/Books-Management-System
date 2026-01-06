@@ -5,14 +5,17 @@ function Error() {
   const error = useRouteError();
 
   return (
-   
     <div className="error-content">
       <h1>404 Error! Page Not Found</h1>
       <h2>Something went wrong.</h2>
       <p>{error?.statusText || error?.message}</p>
-      <button onClick={() => window.history.back()} className="btn">Go Back</button>
+      <button
+        className="btn"
+        onClick={() => window.history.back()}
+      >
+        Go Back
+      </button>
     </div>
-  
   );
 }
 

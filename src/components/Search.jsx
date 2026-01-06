@@ -1,46 +1,40 @@
-import { useState } from "react";
-import { booksData } from "../utils/mockData";
+import { useEffect, useState } from "react";
 import BookList from "./BookList";
-import "./search.css";
+import "./Search.css";
 
 function Search() {
-  const [searchText, setSearchText] = useState("");
-  const [filteredBooks, setFilteredBooks] = useState(booksData);
+  const [books, setBooks] = useState([]);
+  const [query, setQuery] = useState("");
 
-  function handleSearch() {
-    const result = booksData.filter(
-      (book) =>
-        book.title.toLowerCase().includes(searchText.toLowerCase()) ||
-        book.author.toLowerCase().includes(searchText.toLowerCase())
-    );
-    setFilteredBooks(result);
-  }
+  useEffect(() => {
+    async function fetchBooks() {
+      const res = await fetch(
+        "https://api.itbook.store/1.0/search/mongodb"
+      );
+      const data = await res.json();
+      setBooks(data.books || []);
+    }
 
-  function clearSearch() {
-    setFilteredBooks(booksData);
-    setSearchText("");
-  }
+    fetchBooks();
+  }, []);
+
+  const filteredBooks = books.filter((book) =>
+    book.title.toLowerCase().includes(query.toLowerCase())
+  );
 
   return (
     <>
       <h1>Book Management System</h1>
-<div className="search-bar">
-  <input
-    type="text"
-    placeholder="Search books..."
-    value={searchText}
-    onChange={(e) => setSearchText(e.target.value)}
-    className="search-input"
-  />
 
-  <button onClick={handleSearch} className="search-btn primary">
-    Search
-  </button>
-
-  <button onClick={clearSearch} className="search-btn secondary">
-    Clear
-  </button>
-</div>
+      <div className="search-bar">
+        <input
+          className="search-input"
+          type="text"
+          placeholder="Search books..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+      </div>
 
       <BookList books={filteredBooks} />
     </>

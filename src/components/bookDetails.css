@@ -4,14 +4,14 @@
     flex-direction: column;
   justify-content: center;
     align-items: center;
+ 
 }
 
 .book-details img {
   width: 400px;
   margin: 15px 0;
-    border-radius: 10px;
-   
-    box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; 
+       
 }
 
 img:hover{
@@ -19,9 +19,12 @@ img:hover{
     transition: transform 0.3s;
 }
 .book-details h1 {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .book-details h2 {
   color: #555;
+}
+ p{
+ color: white;
 }

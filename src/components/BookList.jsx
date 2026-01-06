@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import Books from "./Books";
+import BookCard from "./BookCard";
 import "./style.css";
 
-
-function BookList({ books = [] }) {
+function BookList({ books }) {
   return (
     <div className="book-list">
       {books.map((book) => (
-        <Link to={`/book/${book.id}`}><Books key={book.id} book={book} /></Link>
-        
+        <Link key={book.isbn13} to={`/book/${book.isbn13}`}>
+          <BookCard book={book} />
+        </Link>
       ))}
     </div>
   );
