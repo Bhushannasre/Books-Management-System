@@ -1,24 +1,24 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import BookList from "./BookList";
 import "./Search.css";
+import useFetch from "../utils/useFetch";
 
 function Search() {
-  const [books, setBooks] = useState([]);
   const [query, setQuery] = useState("");
 
-  useEffect(() => {
-    async function fetchBooks() {
-      const res = await fetch(
-        "https://api.itbook.store/1.0/search/mongodb"
-      );
-      const data = await res.json();
-      setBooks(data.books || []);
-    }
+  const { data, error, loading } = useFetch(
+    "https://api.itbook.store/1.0/search/mongodb"
+  );
 
-    fetchBooks();
-  }, []);
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
-  const filteredBooks = books.filter((book) =>
+  if (error) {
+    return <p>Error loading data: {error}</p>;
+  }
+
+  const filteredBooks = (data?.books || []).filter((book) =>
     book.title.toLowerCase().includes(query.toLowerCase())
   );
 
