@@ -1,20 +1,66 @@
 .main-footer {
-  background: black;
-  color: white;
-  padding: 30px;
+  background: linear-gradient(180deg, #0a0a0a, #111);
+  color: #f1f1f1;
+  padding: 50px 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
 }
 
 .footer-section {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
+/* FIXED heading */
 .heading {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* Reset lists properly */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links {
   display: flex;
-  gap: 20px;
-  font-weight: bold;
+  flex-direction: column;
+  gap: 10px;
 }
 
 a {
-  color: white;
+  color: #cfcfcf;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+a:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 30px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+}
+.footer-bottom a {
+  color: #888;
   text-decoration: none;
 }

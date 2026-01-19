@@ -4,6 +4,7 @@
     flex-direction: column;
   justify-content: center;
     align-items: center;
+    
  
 }
 
@@ -27,4 +28,33 @@ img:hover{
 }
  p{
  color: white;
+}
+.add{
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.add:hover{
+    background-color: #14b537;
+}
+.remove{
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  
+}
+.remove:hover{
+    background-color: #c82333;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
 }

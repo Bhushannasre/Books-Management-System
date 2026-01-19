@@ -8,7 +8,7 @@ import BookDetails from "./components/BookDetails";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
-import Demo from "./components/Demo";
+
 
 import "./index.css";
 
@@ -22,7 +22,8 @@ const appRouter = createBrowserRouter([
       { path: "book/:id", element: <BookDetails /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
-      { path: "demo", element: <Demo/> },
+      // { path: "demo", element: <Demo/> },
+
     ],
   },
 ]);
